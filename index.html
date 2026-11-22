@@ -1,0 +1,1212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rocks Academy | Excellence Beyond Limits</title>
+<meta name="description" content="Rocks Academy Zimbabwe demonstration school. Excellence, discipline, leadership and opportunity.">
+
+<style>
+:root {
+    --navy: #071d35;
+    --blue: #123b64;
+    --gold: #d5ad57;
+    --cream: #f7f5ef;
+    --white: #ffffff;
+    --text: #263548;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    width: 88%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.demo-banner {
+    background: var(--gold);
+    color: var(--navy);
+    text-align: center;
+    padding: 7px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header {
+    background: var(--navy);
+    padding: 17px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.nav-button {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 10px 16px;
+    border-radius: 4px;
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    font-size: 27px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 690px;
+    background:
+    linear-gradient(90deg, rgba(4,19,37,.9), rgba(4,19,37,.25)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?w=1800");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(43px, 7vw, 76px);
+    line-height: 1.12;
+    margin: 22px 0;
+}
+
+.hero p {
+    max-width: 590px;
+    font-size: 17px;
+    color: #e4e8ef;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 3px;
+    font-weight: bold;
+    margin: 5px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: white;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+    padding: 13px 23px;
+    display: inline-block;
+    margin: 5px;
+}
+
+section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading small {
+    color: #b18a39;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(28px, 4vw, 42px);
+    margin-top: 10px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 10px auto;
+    color: #647184;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.intro-image img {
+    height: 420px;
+    border-radius: 8px;
+}
+
+.intro-text h2 {
+    font-size: 37px;
+    color: var(--navy);
+    line-height: 1.25;
+    margin: 15px 0;
+}
+
+.intro-text p {
+    margin-bottom: 15px;
+}
+
+.stats {
+    background: var(--navy);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    padding: 38px 5%;
+    gap: 20px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 30px;
+    color: var(--gold);
+}
+
+.stat span {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.program-grid, .facility-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.program-card, .facility-card, .team-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.program-card:hover, .facility-card:hover,
+.team-card:hover {
+    transform: translateY(-6px);
+}
+
+.program-card {
+    padding: 30px;
+    border-bottom: 3px solid var(--gold);
+}
+
+.program-card .number {
+    color: var(--gold);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.program-card h3, .facility-card h3,
+.team-card h3 {
+    color: var(--navy);
+    margin: 12px 0;
+}
+
+.facility-card img {
+    height: 220px;
+}
+
+.facility-info {
+    padding: 22px;
+}
+
+.facility-info p {
+    font-size: 14px;
+    color: #667085;
+}
+
+.dark-section {
+    background: var(--navy);
+    color: white;
+}
+
+.dark-section .section-heading h2 {
+    color: white;
+}
+
+.dark-section .section-heading p {
+    color: #c6d0dc;
+}
+
+.sports-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.sports-item {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.sports-item img {
+    height: 100%;
+    transition: .4s;
+}
+
+.sports-item:hover img {
+    transform: scale(1.06);
+}
+
+.sports-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 45px 20px 20px;
+    color: white;
+    background: linear-gradient(transparent, rgba(0,0,0,.9));
+}
+
+.sports-label h3 {
+    font-size: 24px;
+}
+
+.meals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.meals-grid img {
+    height: 360px;
+    border-radius: 8px;
+}
+
+.meals-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.meals-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.meals-list li:before {
+    content: "✓ ";
+    color: #b18a39;
+    font-weight: bold;
+}
+
+.team-card {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.team-card img {
+    height: 280px;
+}
+
+.team-card p {
+    color: #8a6b31;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.team-card small {
+    display: block;
+    padding: 0 15px;
+    color: #718096;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    height: 230px;
+    border-radius: 6px;
+}
+
+.admissions {
+    text-align: center;
+    background:
+    linear-gradient(rgba(5,24,46,.88), rgba(5,24,46,.88)),
+    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1500");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.admissions h2 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.contact-box h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    margin: 12px 0;
+}
+
+.contact-box a {
+    color: #a17a29;
+    font-weight: bold;
+}
+
+footer {
+    background: #041323;
+    color: white;
+    padding: 45px 6% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+footer h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: #d2d9e2;
+    display: block;
+    margin: 7px 0;
+    font-size: 14px;
+}
+
+.copyright {
+    border-top: 1px solid #344252;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #b9c2ce;
+}
+
+@media(max-width:850px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .intro-grid, .meals-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-grid, .facility-grid, .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:550px) {
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .program-grid, .facility-grid, .team-grid,
+    .sports-grid, .gallery-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-image img {
+        height: 280px;
+    }
+
+    .sports-item {
+        height: 260px;
+    }
+
+    .gallery-grid img {
+        height: 250px;
+    }
+
+    .admissions h2 {
+        font-size: 31px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="demo-banner">
+    ROCKS ACADEMY WEBSITE DEMONSTRATION
+    • ZIMBABWE
+</div>
+
+<header>
+    <div class="logo">ROCKS <span>ACADEMY</span></div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="navigation">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#academics">ACADEMICS</a>
+        <a href="#facilities">FACILITIES</a>
+        <a href="#leadership">LEADERSHIP</a>
+        <a href="#contact" class="nav-button">CONTACT US</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+    <div class="container hero-content">
+        <div class="eyebrow">WELCOME TO ROCKS ACADEMY</div>
+
+        <h1>Excellence Beyond Limits.</h1>
+
+        <p>
+            Inspiring young minds, nurturing future leaders
+            and creating opportunities through quality education,
+            discipline and outstanding personal development.
+        </p>
+
+        <a href="#about" class="btn">DISCOVER OUR SCHOOL</a>
+
+        <a href="#contact" class="btn-outline">MORE INFORMATION</a>
+    </div>
+</div>
+
+<!-- INTRODUCTION -->
+
+<section id="about">
+    <div class="container intro-grid">
+
+        <div class="intro-image">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1000"
+            alt="Students learning in a classroom">
+        </div>
+
+        <div class="intro-text">
+            <div class="eyebrow">WELCOME TO ROCKS</div>
+
+            <h2>Where Education Meets Excellence</h2>
+
+            <p>
+                Rocks Academy is a fictional Zimbabwean school
+                demonstration created to showcase an inspiring
+                educational environment.
+            </p>
+
+            <p>
+                Our vision is to nurture academically capable,
+                socially responsible and confident young leaders
+                who are ready to make a difference.
+            </p>
+
+            <p>
+                We believe education goes beyond textbooks.
+                It involves character, leadership, creativity,
+                teamwork and personal development.
+            </p>
+
+            <a href="#academics" class="btn">EXPLORE ACADEMICS</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- STATS -->
+
+<div class="stats">
+    <div class="stat">
+        <strong>100%</strong>
+        <span>COMMITMENT TO EXCELLENCE</span>
+    </div>
+
+    <div class="stat">
+        <strong>3</strong>
+        <span>ACADEMIC PROGRAMMES</span>
+    </div>
+
+    <div class="stat">
+        <strong>5+</strong>
+        <span>SPORTS ACTIVITIES</span>
+    </div>
+
+    <div class="stat">
+        <strong>1</strong>
+        <span>SHARED VISION</span>
+    </div>
+</div>
+
+<!-- ACADEMICS -->
+
+<section id="academics">
+    <div class="container">
+
+        <div class="section-heading">
+            <small>LEARNING FOR THE FUTURE</small>
+            <h2>Academic Excellence</h2>
+            <p>
+                Developing knowledge, confidence and critical
+                thinking through a commitment to education.
+            </p>
+        </div>
+
+        <div class="program-grid">
+
+            <div class="program-card">
+                <div class="number">01</div>
+                <h3>Primary Education</h3>
+                <p>
+                    Building strong foundations in literacy,
+                    numeracy, communication and creativity.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="number">02</div>
+                <h3>O Level Education</h3>
+                <p>
+                    Preparing learners for academic achievement
+                    and their national examinations.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="number">03</div>
+                <h3>A Level Education</h3>
+                <p>
+                    Encouraging independent learning,
+                    specialisation and university preparation.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FACILITIES -->
+
+<section id="facilities" style="background:#fff;">
+    <div class="container">
+
+        <div class="section-heading">
+            <small>LEARN • GROW • THRIVE</small>
+            <h2>Our Facilities</h2>
+            <p>
+                An illustrative look at the facilities
+                featured in our Rocks Academy concept.
+            </p>
+        </div>
+
+        <div class="facility-grid">
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800"
+                alt="School library">
+                <div class="facility-info">
+                    <h3>Modern Library</h3>
+                    <p>
+                        A welcoming space for reading,
+                        research and independent learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800"
+                alt="Science laboratory">
+                <div class="facility-info">
+                    <h3>Science Laboratories</h3>
+                    <p>
+                        Practical scientific exploration
+                        and experimental learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800"
+                alt="Computer laboratory">
+                <div class="facility-info">
+                    <h3>Computer Laboratory</h3>
+                    <p>
+                        Digital skills, technology
+                        and modern computing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800"
+                alt="School campus">
+                <div class="facility-info">
+                    <h3>Learning Environment</h3>
+                    <p>
+                        A welcoming environment designed
+                        around learner development.
+                    </p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800"
+                alt="Football field">
+                <div class="facility-info">
+                    <h3>Football Grounds</h3>
+                    <p>
+                        Opportunities for teamwork,
+                        competition and fitness.
+                    </p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800"
+                alt="School recreation">
+                <div class="facility-info">
+                    <h3>Recreation Areas</h3>
+                    <p>
+                        Spaces for relaxation and
+                        student interaction.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SPORTS -->
+
+<section class="dark-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <small>SPORTS AND TALENT</small>
+            <h2>Beyond The Classroom</h2>
+            <p>
+                Encouraging physical fitness, teamwork,
+                discipline and competitive spirit.
+            </p>
+        </div>
+
+        <div class="sports-grid">
+
+            <div class="sports-item">
+                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900"
+                alt="Basketball court">
+                <div class="sports-label">
+                    <h3>Basketball Courts</h3>
+                    <p>Teamwork and competitive basketball.</p>
+                </div>
+            </div>
+
+            <div class="sports-item">
+                <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=900"
+                alt="Tennis court">
+                <div class="sports-label">
+                    <h3>Tennis Courts</h3>
+                    <p>Precision, focus and sporting excellence.</p>
+                </div>
+            </div>
+
+            <div class="sports-item">
+                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=900"
+                alt="Football stadium">
+                <div class="sports-label">
+                    <h3>Football Grounds</h3>
+                    <p>Building teamwork and determination.</p>
+                </div>
+            </div>
+
+            <div class="sports-item">
+                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=900"
+                alt="Sports basketball activity">
+                <div class="sports-label">
+                    <h3>Indoor Sports</h3>
+                    <p>Developing sporting ability and fitness.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- MEALS -->
+
+<section>
+    <div class="container meals-grid">
+
+        <div>
+            <div class="eyebrow">NUTRITION AND WELLNESS</div>
+
+            <h2 style="font-size:38px;color:#071d35;margin:15px 0;">
+                Healthy Meals. Brighter Minds.
+            </h2>
+
+            <p>
+                Our demonstration boarding-school concept
+                includes a dining environment focused on
+                balanced meals and student wellbeing.
+            </p>
+
+            <ul class="meals-list">
+                <li>Nutritious breakfast options</li>
+                <li>Balanced lunch meals</li>
+                <li>Evening dinner service</li>
+                <li>Fresh fruits and vegetables</li>
+                <li>Clean and comfortable dining facilities</li>
+                <li>Access to drinking water</li>
+            </ul>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=1000"
+            alt="Dining and food">
+        </div>
+
+    </div>
+</section>
+
+<!-- TEACHERS -->
+
+<section id="leadership" style="background:#f0f2f6;">
+    <div class="container">
+
+        <div class="section-heading">
+            <small>OUR DEMONSTRATION LEADERSHIP</small>
+            <h2>Meet Our Teaching Team</h2>
+            <p>
+                The following are fictional sample profiles
+                created for the website demonstration.
+            </p>
+        </div>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=700"
+                alt="Fictional headmaster profile photograph">
+                <h3>Mr Daniel Moyo</h3>
+                <p>HEADMASTER</p>
+                <small>School administration and leadership.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=700"
+                alt="Fictional deputy head profile photograph">
+                <h3>Mrs Sarah Chikowore</h3>
+                <p>DEPUTY HEAD</p>
+                <small>Academic and student development.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700"
+                alt="Fictional teacher profile photograph">
+                <h3>Mr Brian Dube</h3>
+                <p>HEAD OF SCIENCES</p>
+                <small>Science and innovation.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=700"
+                alt="Fictional teacher profile photograph">
+                <h3>Mrs Grace Ncube</h3>
+                <p>HEAD OF HUMANITIES</p>
+                <small>History, Geography and humanities.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=700"
+                alt="Fictional teacher profile photograph">
+                <h3>Mr Patrick Chuma</h3>
+                <p>SPORTS DIRECTOR</p>
+                <small>Sports and student recreation.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=700"
+                alt="Fictional teacher profile photograph">
+                <h3>Mrs Linda Muchengeti</h3>
+                <p>STUDENT WELFARE</p>
+                <small>Student support and wellbeing.</small>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PREFECT BODY -->
+
+<section>
+    <div class="container">
+
+        <div class="section-heading">
+            <small>STUDENT LEADERSHIP</small>
+            <h2>The Prefect Body</h2>
+            <p>
+                Sample student leadership profiles.
+                All names and photographs are fictional
+                representations for this demonstration.
+            </p>
+        </div>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700"
+                alt="Fictional head boy profile photograph">
+                <h3>Michael Ndlovu</h3>
+                <p>HEAD BOY</p>
+                <small>Student leadership and discipline.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=700"
+                alt="Fictional head girl profile photograph">
+                <h3>Chipo Mutasa</h3>
+                <p>HEAD GIRL</p>
+                <small>Student representation and leadership.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=700"
+                alt="Fictional prefect profile photograph">
+                <h3>David Mlambo</h3>
+                <p>DEPUTY HEAD BOY</p>
+                <small>Student discipline and cooperation.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=700"
+                alt="Fictional prefect profile photograph">
+                <h3>Ruvimbo Chari</h3>
+                <p>DEPUTY HEAD GIRL</p>
+                <small>Student welfare and representation.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700"
+                alt="Fictional prefect profile photograph">
+                <h3>Andrew Sibanda</h3>
+                <p>SPORTS PREFECT</p>
+                <small>Sports activities and teamwork.</small>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=700"
+                alt="Fictional prefect profile photograph">
+                <h3>Natasha Moyo</h3>
+                <p>ACADEMIC PREFECT</p>
+                <small>Academic cooperation and peer support.</small>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+
+<section style="background:white;">
+    <div class="container">
+
+        <div class="section-heading">
+            <small>EXPLORE OUR WORLD</small>
+            <h2>School Life Gallery</h2>
+            <p>
+                Illustrative photographs of learning,
+                campus life and school activities.
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800"
+            alt="Students together">
+
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800"
+            alt="Students studying">
+
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800"
+            alt="Classroom activity">
+
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800"
+            alt="Student activities">
+
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=800"
+            alt="Education and reading">
+
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800"
+            alt="Learning environment">
+
+        </div>
+    </div>
+</section>
+
+<!-- ADMISSIONS -->
+
+<section class="admissions">
+    <div class="container">
+
+        <div class="eyebrow">YOUR FUTURE STARTS HERE</div>
+
+        <h2>Ready To Reach Your Potential?</h2>
+
+        <p>
+            Contact our demonstration admissions office
+            for more information about Rocks Academy.
+        </p>
+
+        <br>
+
+        <a href="https://wa.me/263714457777?text=Hello%20Rocks%20Academy%2C%20I%20would%20like%20more%20information."
+        class="btn" target="_blank">
+            ENQUIRE ON WHATSAPP
+        </a>
+
+    </div>
+</section>
+
+<!-- MORE INFORMATION / CONTACT -->
+
+<section id="contact">
+    <div class="container">
+
+        <div class="section-heading">
+            <small>WE WOULD LOVE TO HEAR FROM YOU</small>
+            <h2>More Information</h2>
+            <p>
+                Reach our demonstration information desk
+                using the contact details below.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-box">
+                <h3>Contact Information</h3>
+
+                <p><strong>School:</strong> Rocks Academy</p>
+
+                <p>
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/263714457777"
+                    target="_blank">+263 714 457 777</a>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:primemabwe@gmail.com">
+                    primemabwe@gmail.com</a>
+                </p>
+
+                <p><strong>Country:</strong> Zimbabwe</p>
+
+                <a href="https://wa.me/263714457777?text=Hello%2C%20I%20would%20like%20more%20information%20about%20Rocks%20Academy."
+                target="_blank" class="btn">
+                    CHAT WITH US
+                </a>
+            </div>
+
+            <div class="contact-box">
+                <h3>Our Educational Vision</h3>
+
+                <p>
+                    We believe every learner has the potential
+                    to become an achiever, innovator and leader.
+                </p>
+
+                <p>
+                    Rocks Academy represents a vision of
+                    academic excellence, personal growth,
+                    discipline and opportunity.
+                </p>
+
+                <p>
+                    <strong>Our motto:</strong>
+                    Excellence Beyond Limits.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>ROCKS ACADEMY</h3>
+                <p>
+                    Excellence Beyond Limits.
+                    Inspiring the next generation of leaders.
+                </p>
+            </div>
+
+            <div>
+                <h3>QUICK LINKS</h3>
+                <a href="#about">About Us</a>
+                <a href="#academics">Academics</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#leadership">Leadership</a>
+            </div>
+
+            <div>
+                <h3>CONTACT</h3>
+                <a href="https://wa.me/263714457777">WhatsApp Us</a>
+                <a href="mailto:primemabwe@gmail.com">Email Us</a>
+                <a href="#contact">More Information</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Rocks Academy. Demonstration Website.
+            All Rights Reserved.
+            <br>
+            Sample content, staff profiles and images
+            are illustrative and not verified school records.
+        </div>
+
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navigation")
+    .classList.toggle("active");
+}
+
+document.querySelectorAll("#navigation a").forEach(link => {
+    link.addEventListener("click", function() {
+        document.getElementById("navigation")
+        .classList.remove("active");
+    });
+});
+</script>
+
+</body>
+</html>
